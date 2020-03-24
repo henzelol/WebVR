@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-entity position=" 0 0 8">
+            <a-camera></a-camera>
+        </a-entity>
+      <a-box position="0 1 -7"
+             color="red"
+             width="4"
+             height="4"
+             rotation="0 0 0"
+             depth="2"
+             animation="property: rotation;
+                        to:0 360 0;
+                        loop:true;
+                        dur:5000;
+                        easing:linear">
+        </a-box>
+        
+        <a-entity position="0 4 0"
+                  animation="property: rotation;
+                             to:0 -360 0;
+                             loop:true;
+                             dur:5000;
+                             seasing:linear">
+            <a-box color="blue"
+                   position="2 0 0"
+                   animation="property: rotation;
+                              to:0 -360 0;
+                              loop:true;
+                              dur:5000;
+                              easing:linear">
+            </a-box>    
+        </a-entity>
+        
+        <a-box position="0 -3 0"
+             color="yellow"
+             width="2"
+             height="2"
+             rotation="0 0 0"
+             depth="2"
+             animation="property: position;
+                        from:-2 -3 -2;
+                        to:-2 -3 2;
+                        loop:true;
+                        dur:500;
+                        dir: alternate ;
+                        easing:linear">
+        </a-box>
+
+
+    </a-scene>
+  </body>
+</html>

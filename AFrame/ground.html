@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+            
+    </head>
+    
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id="floor" src="img/brick.jpg">
+                <img id="sky" src="img/sky15.jpg">
+            </a-assets>
+            
+            <a-sky src="#sky"
+                   rotation="0 58 0">
+            
+            </a-sky>
+            
+            <a-plane material="color: #FFFFFF"
+                     rotation="-90 0 0"
+                     scale="1000 1000 1"
+                     src="#floor"
+                     repeat="500 500"
+                     normal-map="floor"
+                     normal-texture-repeat="500 500">
+            </a-plane>
+        </a-scene>
+    </body>
+</html>

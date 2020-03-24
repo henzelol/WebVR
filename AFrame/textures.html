@@ -1,0 +1,75 @@
+    <html>
+        <head>
+            <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+            <title>02</title>
+        </head>
+        <body>
+            <a-scene>
+                <a-assets>
+                    <img id="FloorMine" src="img/mine01.jpg">
+                    <img id="diamodMine" src="img/mine02.jpg">
+                </a-assets>
+                <a-box color="white"
+                       width="4"
+                       height="4"
+                       depth="4"
+                       position="-2 0 -8"
+                       repeat="1 2"
+                       src="img/mine01.jpg">
+                </a-box>
+
+                <a-box color="white"
+                       width="4"
+                       height="4"
+                       depth="4"
+                       position="2 0 -8"
+                       src="img/mine02.jpg">
+                </a-box>
+
+                 <a-box color="white"
+                       width="4"
+                       height="4"
+                       depth="4"
+                       position="6 0 -8"
+                        repeat="2 1"
+                        src="img/mine01.jpg">
+                </a-box>
+                <a-box color="white"
+                        width="4"
+                        height="4"
+                        depth="4"
+                        position="6 4 -8"
+                        repeat="1 1"
+                        src="img/mine01.jpg"
+                        normal-map="#diamodMine"
+                       normal-texture-repeat="1 1"
+                       normal-scale="2 -2"
+                       roughness="0.5">
+                </a-box>
+
+                <a-box color="white"
+                       width="4"
+                       height="4"
+                       depth="4"
+                       position="2 4 -8"
+                        repeat="1 1"
+                        src="img/mine01.jpg"
+                       scale="-1 1 1">
+                </a-box>
+
+                <a-box material="color:white;
+                                src: #FloorMine;
+                                normal-map: #diamodMine;
+                                normal-texture-repeat:1 1;
+                                normal-scale:2 -2;
+                                roughness:0.5 "
+                        width="4"
+                        height="4"
+                        depth="4"
+                        position="-2 4 -8"
+                        repeat="1 1">
+                    
+                </a-box>
+            </a-scene>
+        </body>
+    </html>

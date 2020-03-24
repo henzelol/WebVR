@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id="floor" src="img/brick.jpg">
+                <img id="sky" src="img/sky15.jpg">
+                <a-asset-item id="village" src="models/northVillage/scene.gltf"></a-asset-item>
+                <a-asset-item id="monster" src="models/shrek/scene.gltf"></a-asset-item>
+                <a-asset-item id="chopper" src="models/chopper/scene.gltf"></a-asset-item>
+
+
+                
+            </a-assets>
+            
+            <a-sky src="#sky"
+                   rotation="0 58 0">
+            </a-sky>
+            
+            <a-entity position=" 0 25 50">
+                <a-camera></a-camera>
+            </a-entity>
+            
+            <a-entity gltf-model="#village"
+                      position="0 -10 0"
+                      scale="1 1 1">
+            </a-entity>
+            <a-entity gltf-model="#monster"
+                      position="0 -8 0"
+                      scale="10 10 10"
+                      animation="property: rotation;
+                        to:0 360 0;
+                        loop:true;
+                        dur:500;
+                        easing:linear">
+
+            </a-entity>
+            <a-entity gltf-model="#chopper"
+                      position="5 -8 2"
+                      scale="1 1 1"
+                      animation="property: rotation;
+                        to:0 360 0;
+                        loop:true;
+                        dur:5000;
+                        easing:linear">
+            </a-entity>
+            
+            
+        </a-scene>
+    </body>
+</html>

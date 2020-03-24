@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <a-assets>
+                <a-asset-item id="lab" src="models/labtable/scene.gltf"></a-asset-item>
+                <a-asset-item id="cranio" response-type="ArrayBuffer" src="models/cranio/scene.gltf"></a-asset-item>
+                <a-asset-item id="heart" response-type="ArrayBuffer" src="models/heart/heart_animado.gltf"></a-asset-item>
+
+             
+    </a-assets>
+  </head>
+  <body>
+    <a-scene>
+        <a-sky color="grey">
+        </a-sky>
+        <!-- camera inicial -->
+        <a-entity position="0 7 0">
+            <a-camera></a-camera>
+        </a-entity>
+        
+        <!-- Lab -->
+        <a-entity gltf-model="#lab"
+                  scale=" 5 5 5"
+                  position="1 3 -7">
+        </a-entity>
+        
+        <!-- cranio 01 -->
+        <a-entity gltf-model="#cranio"
+                  scale=" 0.1 0.1 0.1"
+                  position="1 8 -4"
+                  animation-mixer="clip:Take 001;
+                                   duration:5"
+                  animation="property: rotation;
+                        to:0 360 0;
+                        loop:true;
+                        dur:100000;
+                        easing:linear">
+        </a-entity>
+        
+        <!-- coração -->
+        <a-entity gltf-model="#heart"
+                  scale=" 0.1 0.1 0.1"
+                  position="3 8 -4"
+                  animation-mixer="clip:Hole | HoleAction;
+                                   duration:5"
+                  animation="property: rotation;
+                        to:0 360 0;
+                        loop:true;
+                        dur:50000;
+                        easing:linear">
+        </a-entity>
+    </a-scene>
+  </body>
+</html>
